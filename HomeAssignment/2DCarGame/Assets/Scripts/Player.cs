@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * 8;
         var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
