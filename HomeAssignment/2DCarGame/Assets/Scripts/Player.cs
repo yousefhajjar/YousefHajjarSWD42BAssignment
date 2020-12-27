@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 2f;
 
     float xMin, xMax;
@@ -15,7 +14,7 @@ public class Player : MonoBehaviour
     {
         SetUpMoveBoundaries();
     }
-
+    
     private void SetUpMoveBoundaries()
     {
         Camera gameCamera = Camera.main;
@@ -33,7 +32,8 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        
+        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * 8;
         var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
         transform.position = new Vector2(newXPos, -6.5f);
