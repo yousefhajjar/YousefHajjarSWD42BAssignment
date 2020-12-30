@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-    [SerializeField] float padding = 2f;
+    [SerializeField] int health = 50;
+    [SerializeField] float padding = 2;
 
     float xMin, xMax;
 
@@ -37,4 +37,31 @@ public class Player : MonoBehaviour
 
         transform.position = new Vector2(newXPos, -6.5f);
     }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        
+        DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        
+        if (!dmg) 
+        {
+            return;
+        }
+
+        ProcessHit(dmg);
+
+        Destroy(otherObject.gameObject);
+    }
+
+    private void ProcessHit(DamageDealer dmg)
+    {
+        health -= dmg.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
