@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+        print(health);
     }
 
     private void Move()
@@ -43,13 +44,21 @@ public class Player : MonoBehaviour
         
         DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
 
+        ObstaclePathing obs = otherObject.gameObject.GetComponent<ObstaclePathing>();
         
         if (!dmg) 
         {
             return;
         }
 
-        ProcessHit(dmg);
+        if (!obs)
+            health -= 1;
+        else
+        {
+            ProcessHit(dmg);
+        }
+
+        
 
         Destroy(otherObject.gameObject);
     }

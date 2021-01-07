@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1225234001004231307}
   - component: {fileID: 4176610536846282072}
   - component: {fileID: -1196110127720106015}
-  - component: {fileID: -563795234462128237}
   - component: {fileID: 1657563808266346462}
+  - component: {fileID: 2735650719522052456}
   m_Layer: 0
   m_Name: truckObstacle
   m_TagString: Untagged
@@ -179,7 +179,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-563795234462128237
+--- !u!114 &1657563808266346462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831352882871381089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9e180c3b153714eb82576c66827c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2735650719522052456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,17 +208,4 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   bulletPrefab: {fileID: 8920730717682225775, guid: 295bea26b9f2a024281d77322ff876bf,
     type: 3}
-  bulletSpeed: 15
---- !u!114 &1657563808266346462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831352882871381089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9e180c3b153714eb82576c66827c5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
+  bulletSpeed: 10

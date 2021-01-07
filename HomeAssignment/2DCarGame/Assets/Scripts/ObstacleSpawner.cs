@@ -10,10 +10,13 @@ public class ObstacleSpawner : MonoBehaviour
 
     int startingWave = 0;
 
+
     IEnumerator Start()
     {
         do
         {
+            DamageDealer.damage += 1;
+            
             yield return StartCoroutine(SpawnAllWaves());
         }
         while (looping);
@@ -27,10 +30,10 @@ public class ObstacleSpawner : MonoBehaviour
 
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveToSpawn)
     {
-        for (int enemyCount = 1; enemyCount <= waveToSpawn.GetNumberOfEnemies(); enemyCount++)
+        for (int enemyCount = 1; enemyCount <= waveToSpawn.GetNumberOfObstacles(); enemyCount++)
         {
             var newEnemy = Instantiate(
-                            waveToSpawn.GetEnemyPrefab(),
+                            waveToSpawn.GetObstaclePrefab(),
                             waveToSpawn.GetWaypoints()[0].transform.position,
                             Quaternion.identity);
 

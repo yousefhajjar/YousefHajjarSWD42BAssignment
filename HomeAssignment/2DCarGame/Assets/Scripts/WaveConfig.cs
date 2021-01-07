@@ -16,9 +16,9 @@ public class WaveConfig : ScriptableObject
 
     [SerializeField] int numberOfObstacles = 1;
 
-    [SerializeField] float ObstacleMoveSpeed = 8f;
+    [SerializeField] float obstacleMoveSpeed = 8f;
 
-    public GameObject GetEnemyPrefab()
+    public GameObject GetObstaclePrefab()
     {
         return ObstaclePrefab;
     }
@@ -45,13 +45,13 @@ public class WaveConfig : ScriptableObject
         return spawnRandomFactor;
     }
 
-    public int GetNumberOfEnemies()
+    public int GetNumberOfObstacles()
     {
         return numberOfObstacles;
     }
 
     public float GetEnemyMoveSpeed()
     {
-        return ObstacleMoveSpeed;
+        return obstacleMoveSpeed;
     }
 }

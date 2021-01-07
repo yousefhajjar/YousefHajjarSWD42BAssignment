@@ -31,18 +31,18 @@ public class ObstacleShooting : MonoBehaviour
 
         if (shotCounter <= 0f)
         {
-            EnemyFire();
+            ObstacleFire();
             
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
     }
 
-    private void EnemyFire()
+    private void ObstacleFire()
     {
 
-        GameObject enemyLaser = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject obstacleBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
-        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -bulletSpeed);
+        obstacleBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -bulletSpeed);
     }
 
 }

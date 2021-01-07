@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2833611919038907840}
   - component: {fileID: -8666704969210397146}
   - component: {fileID: -1668475391663698929}
-  - component: {fileID: 1771975003170798358}
   - component: {fileID: 2207468927252379168}
+  - component: {fileID: 1749031572588217810}
   m_Layer: 0
   m_Name: enemyTank
   m_TagString: Untagged
@@ -171,24 +171,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1771975003170798358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2739057756415888685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668ff00543dbb01449a4eda7356e00a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotCounter: 2
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
-  bulletPrefab: {fileID: 8920730717682225775, guid: 295bea26b9f2a024281d77322ff876bf,
-    type: 3}
-  bulletSpeed: 15
 --- !u!114 &2207468927252379168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,4 +183,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9e180c3b153714eb82576c66827c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+--- !u!114 &1749031572588217810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739057756415888685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668ff00543dbb01449a4eda7356e00a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  bulletPrefab: {fileID: 8920730717682225775, guid: 295bea26b9f2a024281d77322ff876bf,
+    type: 3}
+  bulletSpeed: 10
