@@ -52,21 +52,41 @@ public class Player : MonoBehaviour
         }
 
         if (!obs)
-            health -= 1;
-        else
         {
-            ProcessHit(dmg);
+            health -= dmg.GetDamage();
+            ProcessHit();
         }
-
-        
+        else if (otherObject.tag == "cone")
+        {
+            health -= dmg.GetDamage1();
+            ProcessHit();
+        }
+        else if (otherObject.tag == "barrier")
+        {
+            health -= dmg.GetDamage2();
+            ProcessHit();
+        }
+        else if (otherObject.tag == "enemyCar")
+        {
+            health -= dmg.GetDamage3();
+            ProcessHit();
+        }
+        else if (otherObject.tag == "enemyTank")
+        {
+            health -= dmg.GetDamage4();
+            ProcessHit();
+        }
+        else if (otherObject.tag == "truck")
+        {
+            health -= dmg.GetDamage5();
+            ProcessHit();
+        }
 
         Destroy(otherObject.gameObject);
     }
 
-    private void ProcessHit(DamageDealer dmg)
+    private void ProcessHit()
     {
-        health -= dmg.GetDamage();
-
         if (health <= 0)
         {
             Destroy(gameObject);

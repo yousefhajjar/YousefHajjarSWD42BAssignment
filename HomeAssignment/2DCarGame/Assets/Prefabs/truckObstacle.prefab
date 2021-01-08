@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2735650719522052456}
   m_Layer: 0
   m_Name: truckObstacle
-  m_TagString: Untagged
+  m_TagString: truck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotCounter: 0
   minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
+  maxTimeBetweenShots: 2
   bulletPrefab: {fileID: 8920730717682225775, guid: 295bea26b9f2a024281d77322ff876bf,
     type: 3}
-  bulletSpeed: 10
+  bulletSpeed: 15

@@ -10,13 +10,10 @@ public class ObstacleSpawner : MonoBehaviour
 
     int startingWave = 0;
 
-
     IEnumerator Start()
     {
         do
         {
-            DamageDealer.damage += 1;
-            
             yield return StartCoroutine(SpawnAllWaves());
         }
         while (looping);

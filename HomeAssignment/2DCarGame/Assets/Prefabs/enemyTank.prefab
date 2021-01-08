@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1749031572588217810}
   m_Layer: 0
   m_Name: enemyTank
-  m_TagString: Untagged
+  m_TagString: enemyTank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,4 +200,4 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   bulletPrefab: {fileID: 8920730717682225775, guid: 295bea26b9f2a024281d77322ff876bf,
     type: 3}
-  bulletSpeed: 10
+  bulletSpeed: 15
