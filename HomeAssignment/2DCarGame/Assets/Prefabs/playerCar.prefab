@@ -231,3 +231,5 @@ MonoBehaviour:
   padding: 2
   playerCrashSound: {fileID: 8300000, guid: 707eed3fc28adff4fb6ed9b474fa95a4, type: 3}
   playerCrashSoundVolume: 0.05
+  deathVFX: {fileID: 2023411326752374358, guid: f3c67e3802a86fb4392feb6c68e52041,
+    type: 3}

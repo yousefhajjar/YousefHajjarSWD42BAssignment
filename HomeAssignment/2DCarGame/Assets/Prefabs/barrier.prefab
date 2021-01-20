@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7826128565979275634}
   - component: {fileID: -6965712343579873764}
   - component: {fileID: 7675306666145064560}
+  - component: {fileID: 522201180988465845}
   m_Layer: 0
   m_Name: barrier
   m_TagString: barrier
@@ -148,3 +149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9e180c3b153714eb82576c66827c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &522201180988465845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632030409734257434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ac708c5c5cad54c8ad5e469575d3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 1996824610567618664, guid: 05e7cc4e90bc3ca41be07cced8719f3e,
+    type: 3}

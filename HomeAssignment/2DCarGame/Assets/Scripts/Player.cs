@@ -10,6 +10,11 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip playerCrashSound;
     [SerializeField] [Range(0, 1)] float playerCrashSoundVolume = 0.05f;
 
+    [SerializeField] AudioClip gameOverSound;
+    [SerializeField] [Range(0, 1)] float gameOverSoundVolume = 0.1f;
+
+    [SerializeField] GameObject deathVFX;
+
     float xMin, xMax;
 
     // Start is called before the first frame update
@@ -88,15 +93,26 @@ public class Player : MonoBehaviour
         Destroy(otherObject.gameObject);
     }
 
-    
-
     private void ProcessHit()
     {
+        
         if (health <= 0)
         {
-            Destroy(gameObject);
-
+            Die();
             FindObjectOfType<Level>().LoadGameOver();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(gameOverSound, Camera.main.transform.position, gameOverSoundVolume);
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, 0.5f);
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }

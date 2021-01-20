@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -1196110127720106015}
   - component: {fileID: 1657563808266346462}
   - component: {fileID: 2735650719522052456}
+  - component: {fileID: 4185828341584410394}
   m_Layer: 0
   m_Name: truckObstacle
   m_TagString: truck
@@ -167,3 +168,17 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8920730717682225775, guid: 295bea26b9f2a024281d77322ff876bf,
     type: 3}
   bulletSpeed: 15
+--- !u!114 &4185828341584410394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831352882871381089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ac708c5c5cad54c8ad5e469575d3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 1996824610567618664, guid: 05e7cc4e90bc3ca41be07cced8719f3e,
+    type: 3}

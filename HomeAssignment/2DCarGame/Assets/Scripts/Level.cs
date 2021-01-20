@@ -7,23 +7,30 @@ public class Level : MonoBehaviour
 {
     [SerializeField] float delayInSeconds = 2f;
 
-    IEnumerator WaitAndLoad()
+    IEnumerator WaitAndLoad(string scene)
     {
         yield return new WaitForSeconds(delayInSeconds);
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene(scene);
     }
 
     public void LoadGameOver()
     {
-        StartCoroutine(WaitAndLoad());
+        StartCoroutine(WaitAndLoad("GameOver"));
     }
     public void LoadStartMenu()
     {
         SceneManager.LoadScene(0);
     }
+    
+    public void LoadWinScene()
+    {
+        StartCoroutine(WaitAndLoad("WinScene"));
+    }
     public void LoadGame()
     {
         SceneManager.LoadScene("2DCarGame");
+
+        FindObjectOfType<GameSession>().ResetGame();
     }
     public void QuitGame()
     {
