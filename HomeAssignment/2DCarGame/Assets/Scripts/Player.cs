@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] int health = 50;
     [SerializeField] float padding = 2;
 
+    [SerializeField] AudioClip playerCrashSound;
+    [SerializeField] [Range(0, 1)] float playerCrashSoundVolume = 0.05f;
+
     float xMin, xMax;
 
     // Start is called before the first frame update
@@ -14,14 +17,13 @@ public class Player : MonoBehaviour
     {
         SetUpMoveBoundaries();
     }
-    
+
     private void SetUpMoveBoundaries()
     {
         Camera gameCamera = Camera.main;
 
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
-
     }
 
     // Update is called once per frame
@@ -41,12 +43,12 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
-        
+
         DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
 
         ObstaclePathing obs = otherObject.gameObject.GetComponent<ObstaclePathing>();
-        
-        if (!dmg) 
+
+        if (!dmg)
         {
             return;
         }
@@ -56,34 +58,37 @@ public class Player : MonoBehaviour
             health -= dmg.GetDamage();
             ProcessHit();
         }
-        else if (otherObject.tag == "cone")
+        else if (otherObject.CompareTag("cone"))
         {
             health -= dmg.GetDamage1();
             ProcessHit();
         }
-        else if (otherObject.tag == "barrier")
+        else if (otherObject.CompareTag("barrier"))
         {
             health -= dmg.GetDamage2();
             ProcessHit();
         }
-        else if (otherObject.tag == "enemyCar")
+        else if (otherObject.CompareTag("enemyCar"))
         {
             health -= dmg.GetDamage3();
             ProcessHit();
         }
-        else if (otherObject.tag == "enemyTank")
+        else if (otherObject.CompareTag("enemyTank"))
         {
             health -= dmg.GetDamage4();
             ProcessHit();
         }
-        else if (otherObject.tag == "truck")
+        else if (otherObject.CompareTag("truck"))
         {
             health -= dmg.GetDamage5();
             ProcessHit();
         }
 
+        AudioSource.PlayClipAtPoint(playerCrashSound, Camera.main.transform.position, playerCrashSoundVolume);
         Destroy(otherObject.gameObject);
     }
+
+    
 
     private void ProcessHit()
     {
@@ -92,5 +97,4 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

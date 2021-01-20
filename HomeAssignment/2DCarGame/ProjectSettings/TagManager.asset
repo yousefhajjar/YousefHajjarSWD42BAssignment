@@ -9,6 +9,7 @@ TagManager:
   - enemyTank
   - truck
   - barrier
+  - bullet
   layers:
   - Default
   - TransparentFX
