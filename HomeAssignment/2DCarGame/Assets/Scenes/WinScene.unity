@@ -291,8 +291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -453}
-  m_SizeDelta: {x: 801.6123, y: 204.38036}
+  m_AnchoredPosition: {x: 0.000015259, y: -597}
+  m_SizeDelta: {x: 1008.91223, y: 291.31256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865244463
 MonoBehaviour:
@@ -395,8 +395,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 115.1
-  m_fontSizeBase: 115.1
+  m_fontSize: 147.6
+  m_fontSizeBase: 147.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -480,8 +480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.1362, y: 1}
-  m_SizeDelta: {x: 761.146, y: 191.51062}
+  m_AnchoredPosition: {x: -0.000015259, y: 0.000022888}
+  m_SizeDelta: {x: 935.0105, y: 278.44275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929566113
 MonoBehaviour:
@@ -584,8 +584,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 133.1
-  m_fontSizeBase: 133.1
+  m_fontSize: 188.7
+  m_fontSizeBase: 188.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -668,8 +668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: 515}
-  m_SizeDelta: {x: 875.0648, y: 508.79218}
+  m_AnchoredPosition: {x: 0, y: 819}
+  m_SizeDelta: {x: 1202.7325, y: 609.0982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1260385137
 MonoBehaviour:
@@ -717,8 +717,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 107.46
-  m_fontSizeBase: 107.46
+  m_fontSize: 156.7
+  m_fontSizeBase: 156.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1117,6 +1117,9 @@ MonoBehaviour:
   padding: 2
   playerCrashSound: {fileID: 8300000, guid: 707eed3fc28adff4fb6ed9b474fa95a4, type: 3}
   playerCrashSoundVolume: 0.05
+  gameOverSound: {fileID: 0}
+  gameOverSoundVolume: 0.1
+  deathVFX: {fileID: 0}
 --- !u!1 &5488106236628693181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1261,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 969857922946985060, guid: 294fe3fd141b9674796662ca5c698e77,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 969857922946985060, guid: 294fe3fd141b9674796662ca5c698e77,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 969857922946985062, guid: 294fe3fd141b9674796662ca5c698e77,
         type: 3}
